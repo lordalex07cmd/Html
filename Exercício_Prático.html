@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+   <title>JavaScript: Exercício Prático 1 </title>
+   <script>
+     function limpar()
+	{
+		//faz o reload da página (volta À fase inicial)
+		window.location.reload();
+	} 
+	
+     function validar(xNota1,xNota2,xNota3) {
+	var xMedia=0;	
+
+        if  (parseInt(xNota1)<0 || parseInt(xNota1)>20 || isNaN(xNota1) ){
+		window.alert('Avaliação Inválida1 (Disciplina - 1). Digite uma nota entre 0 e 20.');
+		document.getElementById("d1").value="";
+		document.getElementById("d1").focus();
+		return false;
+		}			
+	if (parseInt(xNota2)<0 || parseInt(xNota2)>20 || isNaN(xNota2) ) {
+		window.alert('Avaliação Inválida (Disciplina - 2). Digite uma nota entre 0 e 20.');
+		document.getElementById("d2").value="";
+		document.getElementById("d2").focus();
+		return false;
+		}
+	if (parseInt(xNota3)<0 || parseInt(xNota3)>20 || isNaN(xNota3) ) {
+		window.alert('Avaliação Inválida (Disciplina - 3). Digite uma nota entre 0 e 20.');
+		document.getElementById("d3").value="";
+		document.getElementById("d3").focus();
+		return false;
+		}
+        xMedia= Math.round((xNota1+xNota2+xNota3)/3);				
+	if (xMedia>=10)
+	   document.getElementById("Res").innerHTML= "aluno APROVADO com a média de " + xMedia;
+	else if (xMedia<=7)
+		document.getElementById("Res").innerHTML= "o aluno vai a REPROVADO com a média de " + xMedia;
+    	else
+		document.getElementById("Res").innerHTML= "aluno ORAL com a média de " + xMedia;
+     }
+     </script>
+</head>
+<body>
+       		
+		<label for="d1">Disciplina (1): </label>
+		<input id="d1" type="number" style="width:150px;height:40px;" foucus max=20 min=0 required><br><br>
+		<label for="d2">Disciplina (2): </label>
+		<input id="d2" type="number" style="width:150px;height:40px;" max=20 min=0 required><br><br>		
+		<label for="d3">Disciplina (3):  </label>
+		<input id="d3" type="number" style="width:150px;height:40px;" max=20 min=0 required><br><br>
+	     
+		<label >Resultado: </label>
+                <label id="Res" style="width:150px;height:40px"> </label> <br> <br>
+
+		<button onclick="validar(parseInt(d1.value),parseInt(d2.value),parseInt(d3.value))"style="width:150px;height:40px">Validar</button>
+        	<button onclick="limpar()" style="width:150px;height:40px">Limpar</button><br><br>	
+</body>
+</html>

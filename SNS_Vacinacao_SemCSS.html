@@ -1,0 +1,50 @@
+<html lang="pt-pt">
+  <head>
+    <title>Vacinação - José Carlos Almeida</title>
+    
+  </head>
+  <body>
+    <form>
+          <h2>Coronavírus | COVID-19</h2>
+          <h3>Preencha o seguinte formulário com os seus dados</h3>
+
+          <label for="n0">Número de Utente</label><br>
+          <input  id="n0" type="number" min="100000000"  max="999999999" autofocus required></input><br>
+ 
+          <label for="n1">Nome completo</label><br>
+          <input  id="n1" type="text" minlength="5" required></input><br>
+  
+          <label for="n2">Data de nascimento</label><br>
+          <input  id="n2" type="date" max="3000-01-01" onfocus="this.max=new Date().toISOString().split('T')[0]" / required><br>
+	
+          <br><button   onclick="Valida(parseInt(n0.value),n1.value,(n2.value).toString())"> Validar</button>
+
+    </form>
+    <script>
+	function Valida(xNumero,xNome,xData)
+	{
+ 		
+		if ((xNumero<100000000) || (xNumero>999999999))
+			{
+			  window.alert("O numero inserido (" + xNumero + ") é inválido. O némero deve ter 9 digitos.");
+			  document.getElementById("n0").focus();
+			  return;
+			}
+		if (xNome.length<5) 
+			{
+			  window.alert("O nome inserido (" + xNome + ") é inválido. Deve ter pelo menos 5 caracteres.");
+			  document.getElementById("n1").focus();
+  			  return;
+			}
+		if (xData.length<10) 
+			{
+			  window.alert("A data inserida (" + xData + ") é inválida. ");
+			  document.getElementById("n2").focus();
+			  return;
+			}
+		window.alert ("Dados válidos e Submetidos!! \n Vai receber brevemente um email com a convocatória.");
+	}
+
+    </script>
+  </body>
+</html>

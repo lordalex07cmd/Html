@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="pt" >
+<head>
+    <meta charset="utf-8" />
+    <title>Exercicio Menor de 5 números</title>
+</head>
+
+<body>
+    <label for="n1">Digite o 1º número:</label>
+    <input id="n1" name="n1" type="number" utofocus required placeholder="(número)" style="width:150px;height:40px"> <br> <br>
+    <label for="n2">Digite o 2º número:</label>
+    <input id="n2" name="n2" type="number" utofocus required placeholder="(número)" style="width:150px;height:40px"> <br> <br>   
+    <label for="n3">Digite o 3º número:</label>
+    <input id="n3" name="n3" type="number" utofocus required placeholder="(número)" style="width:150px;height:40px"> <br> <br>    
+    <label for="n4">Digite o 4º número:</label>
+    <input id="n4" name="n4" type="number" utofocus required placeholder="(número)" style="width:150px;height:40px"> <br> <br>    
+    <label for="n5">Digite o 5º número:</label>
+    <input id="n5" name="n5" type="number" utofocus required placeholder="(número)" style="width:150px;height:40px"> <br> <br>   
+
+    <button onclick="ValMenor(parseInt(n1.value),parseInt(n2.value),parseInt(n3.value),parseInt(n4.value),parseInt(n5.value))" style="width:150px;height:40px">Calcula Menor </button> <br>
+ 
+    <label id="Resultado"></label> <br> <br>
+    <script>
+       function ValMenor(x1,x2,x3,x4,x5) {
+
+        var xMenor=x1;
+
+	if (xMenor>x2)
+	    xMenor=x2;
+	
+	if (xMenor>x3)
+	    xMenor=x3;
+
+	if (xMenor>x4)
+	    xMenor=x4;
+
+	if (xMenor>x5)
+	    xMenor=x5;
+
+	 document.getElementById("Resultado").innerHTML = "O menor valor  valor é " + xMenor;
+                   
+        }
+    </script>
+</body>
+</html >

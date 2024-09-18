@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Exercicio Maior de 2 números</title>
+  </head>
+  <body>
+  <script>
+ 
+	var xValor1 = parseInt(prompt("Digite o valor 1:"));
+	var xValor2 = parseInt(prompt("Digite o valor 2:"));
+        var xMaior=xValor1;
+	var xSeq ="1º valor";
+	if (xMaior<xValor2)
+	   { xMaior=xValor2;
+ 	  xSeq="2º valor";}
+	else
+	   { xMaior=xValor1;
+ 	  xSeq="1º valor";}
+	document.writeln("O " + xSeq + " é o maior valor (" + xMaior +")");
+  </script>
+  </body>
+</html>

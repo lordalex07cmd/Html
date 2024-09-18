@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Exercício 4 Operações - Versão 2</title>
+  </head>
+  <body>
+  <button onclick="Calcula(1)" style="width:150;height:40" > Somar </button>  </br> </br>	
+  <button onclick="Calcula(2)" style="width:150;height:40" >Subtração</button>	</br> </br>	
+  <button onclick="Calcula(3)" style="width:150;height:40" >Multiplicação</button> </br> </br>		
+  <button onclick="Calcula(4)"style="width:150;height:40" >Divisão</button> </br> 		
+  <script>
+	function Calcula(XOperacao)
+ 	{
+	   var valor1 = parseInt(prompt("Digite o valor 1: "));
+          	  var valor2 = parseInt(prompt("Digite o valor 2: "));	
+           	  switch (XOperacao)
+		{
+		 case 1:
+			document.write("<h2>"+"A Soma é " + (parseInt(valor1) + parseInt(valor2)) +"<h2>");
+			break;
+		 case 2:
+			document.write("<h2>"+"A Subtração é " + (parseInt(valor1) - parseInt(valor2)) +"<h2>");
+			break;
+		 case 3:
+			document.write("<h2>"+"A Multiplicação é " + (parseInt(valor1) * parseInt(valor2)) +"<h2>");
+			break;
+	 	 case 4:
+			if ( valor2!=0)
+			     document.write("<h2>"+"A Divisão é " + (parseInt(valor1) / parseInt(valor2)) +"<h2>");
+			else
+			     document.write("<h2>"+" Divisão Impossível " +"<h2>");
+		}
+ 	}
+  </script>
+  </body>
+</html

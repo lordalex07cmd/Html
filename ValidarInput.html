@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>Ler valores da página</title>
+  </head>
+  <body>
+     <label for="valor1">Digite um valor:</label>  
+     <input id="Valor1" name="Valor1"  type="number"> </input></br> </br>
+     <button onclick="valida('Valor1',Valor1.value)" style="width:150;height:40">Validar </button> </br>    
+     <script>
+        function valida(xid,xvalor)
+        {      
+           if (xvalor>=100 || xvalor<0) 
+		{
+		document.getElementById(xid).value=""
+		document.getElementById(xid).focus();
+		window.alert('O número digitado é superior a 100. Digite novamente');
+		}
+       }
+     </script>
+  </body>
+</html>
